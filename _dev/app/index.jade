@@ -8,7 +8,8 @@ head
 	link(rel="shortcut icon", type="image/png", href="http://localhost:9001/favicon.png")
 	
 	title Beardy
-
+	
+	link(rel="stylesheet", type="text/css", href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300")
 	link(rel="stylesheet", type="text/css", href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300")
 	link(rel="stylesheet", type="text/css", href="vendor/semantic.css")
 	link(rel="stylesheet", type="text/css", href="styles/app.css")
@@ -19,10 +20,7 @@ body
 		script(src="vendor/semantic.js")
 		script(src="vendor/handlebars.js")
 		script(src="vendor/ember.js")
-
-		// 
-			script(src="vendor/underscore.js")
-			script(src="vendor/backbone.js")
+		script(src="vendor/underscore.js")
 	else
 		script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js")
 		script(src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.19.3/javascript/semantic.js")
@@ -33,5 +31,8 @@ body
 			script(src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js")
 			script(src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js")
 
+	script(src="vendor/showdown.js")
+	script(src="vendor/moment.js")
+		
 	script(src="scripts/templates.js")
 	script(src="scripts/app.js")

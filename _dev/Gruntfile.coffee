@@ -24,7 +24,7 @@ module.exports = (grunt) ->
 
     watch: {
       coffee: {
-        files: [paths.app + '/scripts/**/*.coffee']
+        files: ['app/scripts/**/*.coffee']
         tasks: ['coffee']
         options: {
           livereload: true
@@ -35,7 +35,7 @@ module.exports = (grunt) ->
       }
 
       sass: {
-        files: [paths.app + '/styles/**/*.{scss,sass}']
+        files: ['app/styles/**/*.{scss,sass}']
         tasks: ['sass']
         options: {
           livereload: true
@@ -46,7 +46,7 @@ module.exports = (grunt) ->
       }
 
       jst: {
-        files: [paths.app + "/templates/**/*.jst"]
+        files: ["app/templates/**/*.jst"]
         tasks: ['jst']
         options: {
           livereload: true
@@ -57,7 +57,7 @@ module.exports = (grunt) ->
       }
 
       emberTemplates: {
-        files: [paths.app + "/templates/**/*.hbs"]
+        files: ["app/templates/**/*.hbs"]
         tasks: ['emberTemplates']
         options: {
           livereload: true
@@ -68,7 +68,7 @@ module.exports = (grunt) ->
       }
 
       jade: {
-        files: [paths.app + "/index.jade"]
+        files: ["app/index.jade"]
         tasks: ['jade']
         options: {
           livereload: true
@@ -91,8 +91,8 @@ module.exports = (grunt) ->
 
     sass:
       options:
-        sourceMap: true
-        outputStyle: "compressed"
+        # sourceMap: true
+        outputStyle: "expanded" # nested, compact, compressed, expanded
       compile: 
         expand: true,
         flatten: true,
@@ -154,6 +154,8 @@ module.exports = (grunt) ->
           { src: paths.dev + "/bower_components/semantic/build/packaged/javascript/semantic.js", dest: paths.dist + "/vendor/semantic.js" }
           { src: paths.dev + "/bower_components/handlebars/handlebars.js", dest: paths.dist + "/vendor/handlebars.js" }
           { src: paths.dev + "/bower_components/ember/ember.js", dest: paths.dist + "/vendor/ember.js" }
+          { src: paths.dev + "/bower_components/showdown/src/showdown.js", dest: paths.dist + "/vendor/showdown.js" }
+          { src: paths.dev + "/bower_components/moment/moment.js", dest: paths.dist + "/vendor/moment.js" }
         ]
 
     connect: {
